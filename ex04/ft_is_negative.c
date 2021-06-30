@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgicquel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 13:27:07 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/06/30 13:27:13 by hgicquel         ###   ########.fr       */
+/*   Created: 2021/06/30 14:33:30 by hgicquel          #+#    #+#             */
+/*   Updated: 2021/06/30 14:43:01 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_is_negative(int	n)
 {
-	int	i;
+	char	c;
 
-	i = 48;
-	while (i <= 57)
-	{
-		write(1, &i, 1);
-		i++;
-	}
+	if (n < 0)
+		c = 'N';
+	else
+		c = 'P';
+	write(1, &c, 1);
 }
